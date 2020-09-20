@@ -1,0 +1,273 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.3, 10 May 2020) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicons fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+%\definecolor{Mulberry}{HTML}{72243D}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{DarkGrey}{HTML}{212020}
+\definecolor{MyBlue}{HTML}{1B6F8E}
+\definecolor{MyRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{heading}{MyBlue}
+\colorlet{accent}{MyRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{DarkGrey}
+\colorlet{tagline}{MyRed}
+\colorlet{headingrule}{GoldenEarth}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+
+\begin{document}
+\name{Karan Kumar}
+\tagline{Computer Science Student}
+%% You can add multiple photos on the left or right
+\photoR{2.8cm}{pic2}
+
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{karan.kk7575@gmail.com}
+  \phone{+36-20-4178306}
+  \mailaddress{Paulay Ede ut 44, 1061}
+  \location{Budapest, HUNGARY}
+  \linkedin{linkedin.com/in/karankumar1998}
+  \github{www.github.com/Karan757}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{0000-0000-0000-0000}
+  %% You can add your own arbtrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Experience}
+
+
+\cvevent{DevOps Automation Intern}{SAP Hungary}{July 2020 -- Ongoing}{Budapest, Hungary}
+\begin{itemize}
+\item Automating implementation processes for SAP SuccessFactors HCM products. Using Azure, Terraform, Chef, Rundeck and other tools. 
+\end{itemize}
+\divider
+
+\cvevent{Application Operations Intern}{SAP Hungary}{Jan 2020 -- June 2020}{Budapest, Hungary}
+\begin{itemize}
+\item Maintenance of a Cloud Application called Successfactors
+\item Getting familiar with Unix/Linux operating systems.
+\item Getting familiar with monitoring tools like Pingdom, Zabbix, Splunk
+\item Solving issues reported by customers/caught by monitoring systems 
+\end{itemize}
+\divider
+
+\cvevent{Summer Internship}{TapFreaks Ltd}{July 2019 -- September 2019}{Karachi, Pakistan}
+\begin{itemize}
+\item Working on basic mobile Application in Android Studio
+\end{itemize}
+
+\divider
+
+\cvsection{Job Related Skills}
+
+%\cvevent{Data Analytics and Dashboard}{Course Project}{}{}
+\begin{itemize}
+\item Experience with C++, Java, Python, Javascript, PHP, PL/SQL Tableau and Matlab.
+\item Experience with DevOps, CD/CI automation on GitLab.
+\item Understanding of Terraform, Chef cookbook
+\item Corporate work experience in SAP Automation Team
+\item Understanding of Data Science, Machine Learning, Data Visualization
+\item Always interested in learning new technologies and concepts. 
+\item English Language Skill
+\end{itemize}
+
+\divider
+
+\cvsection{Education}
+
+\cvevent{B.Sc.\ in Computer Science}{Eotvos Lorand University}{Sept 2017 --  Jan 2021}{}
+Thesis title: Movie Recommendation System
+\medskip 
+\vspace{10mm}
+
+
+\cvsection{Certifications}
+\begin{itemize}
+\item Introduction to Data Science in Python (University of Michigan Coursera)
+\item Machine Learning for All (University of London Coursera)
+\item Introduction to Big Data (University of California San Diego Coursera)
+\item Cloud Computing Concepts (University of Illinois at Urbana-Champaign Coursera)
+\item HTML, CSS, and Javascript for Web Developers (Johns Hopkins University Coursera)
+\item Responsive Website Basics: Code with HTML, CSS, and JavaScript (University of London Coursera)
+\item Building Web Applications in PHP (University of Michigan Coursera)
+\item Introduction to Structured Query Language (University of Michigan Coursera)
+\item Building Database Applications in PHP (University of Michigan Coursera)
+\item Python Programming: A Concise Introduction (Wesleyan University Coursera)
+\item MATLAB Onramp (MathWorks)
+\end{itemize}
+
+
+%\cvevent{Project 2}{Funding agency/institution}{Project duration}{}
+%A short abstract would also work.
+
+%\medskip
+
+%\cvsection{A Day of My Life}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+%\wheelchart{1.5cm}{0.5cm}{%
+  %6/8em/accent!30/{Sleep,\\beautiful sleep},
+  %3/8em/accent!40/Hopeful novelist by night,
+  %8/8em/accent!60/Daytime job,
+  %2/10em/accent/Sports and relaxation,
+  %5/6em/accent!20/Spending time with family
+%}
+
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{My Life Philosophy}
+
+\begin{quote}
+``Don't wait for the right moment to start, start and make each moment right.''
+\end{quote}
+
+\cvsection{Skills}
+
+
+\cvtag{Python}
+\cvtag{Machine Learning}
+\cvtag{Java}
+\cvtag{C++}
+\cvtag{JavaScript}
+\cvtag{Data Science}
+\cvtag{Data Visualization}
+\cvtag{Git}
+\cvtag{Continuous Deployment}\\
+\cvtag{Continuous Integration}
+\cvtag{Probability \& Statistics}
+\cvtag{Terraform}
+\cvtag{PHP}
+\cvtag{Pl/SQL}
+
+
+
+\divider\smallskip
+
+
+\cvsection{Strengths}
+
+\cvtag{Hard-working}
+\cvtag{Eye for detail}\\
+\cvtag{Motivator \& Leader}
+\cvtag{Teamwork}\\
+\cvtag{Logical Thinking}
+\cvtag{Logic Building}\\
+\cvtag{Time Management}
+\cvtag{Passionate}
+
+\divider\smallskip
+
+\cvsection{Languages}
+
+\cvskill{English}{4}
+\cvskill{Urdu}{5}
+\cvskill{Sindhi}{5}
+
+\divider\smallskip
+
+\cvsection{Projects}
+\begin{itemize}
+\item Voice Assistant (Python)
+\item School Management System (Java, SQL)
+\item Snake Game (Java)
+\item Command & Conquer Game (Java)
+\item Hunting Game (Java)
+\item Apple IPhone Website (HTML, CSS)
+\end{itemize}
+
+\divider
+%\cvsection{Reference}
+%\divider
+
+
+
+\end{paracol}
+
+
+\end{document}
