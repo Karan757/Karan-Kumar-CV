@@ -30,7 +30,7 @@
 %% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
 
 % Change the page layout if you need to
-\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+\geometry{left=1cm,right=1cm,top=0.8cm,bottom=1cm,columnsep=1cm}
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
@@ -66,9 +66,9 @@
 \colorlet{headingrule}{GoldenEarth}
 
 % Change some fonts, if necessary
-\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\namefont}{\LARGE\rmfamily\bfseries}
 \renewcommand{\personalinfofont}{\footnotesize}
-\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsectionfont}{\large\rmfamily\bfseries}
 \renewcommand{\cvsubsectionfont}{\large\bfseries}
 
 
@@ -78,18 +78,29 @@
 \renewcommand{\ratingmarker}{\faCircle}
 
 
+% Define olditem and assign item value
+\let\olditem\item
+\renewcommand{\item}{\small\olditem}
+
+% \newcommand{\smallItem}{\small\item}
+
+\newcommand{\subItem}[1]{
+    {\setlength\itemindent{10pt}\item[-] #1}
+}
+
+
 \begin{document}
 \name{Karan Kumar}
 \tagline{DevOps Engineer}
 %% You can add multiple photos on the left or right
-\photoR{3.0cm}{pic}
+\photoR{3.3cm}{pic}
 
 
 \personalinfo{%
   % Not all of these are required!
-  \email{karan.kk7575@gmail.com}
-  \phone{+36-20-4178306}
-  \mailaddress{Römerstraße 11-12, 28203}
+  \email{karan.kk7575@gmail.com} \hspace{8.6mm}
+  \phone{+49-176-21411550} \hspace{5mm}
+  % \mailaddress{Große Krankenstraße 1, 28199} \\
   \location{Bremen, Germany}
   \linkedin{linkedin.com/in/karankumar1998}
   \github{www.github.com/Karan757}
@@ -109,7 +120,7 @@
 % \AtBeginEnvironment{itemize}{\small}
 
 %% Set the left/right column width ratio to 6:4.
-\columnratio{0.6}
+\columnratio{0.65}
 
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
@@ -120,6 +131,7 @@
 \begin{itemize}
 \item Docker, Kubernetes, GitLab Pipelines
 \item Python, Shell Script, PostgreSQL
+\item Minio, RabbitMQ, Vault
 \item Grafana, Prometheus, Sentry
 \end{itemize}
 \divider
@@ -129,7 +141,7 @@
 \item Automating implementation processes for SAP SuccessFactors HCM products. 
 \item Azure, Google Cloud, SAP Converged Cloud (OpenStack)
 \item Terraform, Chef, Ruby
-\item Rundeck, Jenkins, Jira and other tools. 
+\item Rundeck, Jenkins, Jira
 \end{itemize}
 \divider
 
@@ -137,7 +149,7 @@
 \begin{itemize}
 \item Azure, Google Cloud, SAP Converged Cloud (OpenStack)
 \item Terraform, Chef, Ruby
-\item Rundeck, Jenkins, Jira and other tools. 
+\item Rundeck, Jenkins, Jira
 \end{itemize}
 \divider
 
@@ -155,45 +167,53 @@
 \item Worked on basic mobile Application in Android Studio
 \end{itemize}
 % \divider
-\vspace{22mm}
+\vspace{2mm}
 
-\cvsection{Job Related Skills}
 
-%\cvevent{Data Analytics and Dashboard}{Course Project}{}{}
-\begin{itemize}
-\item Experience with C++, Java, Python, Javascript, Ruby, PHP, PL/SQL, Go, jQuery, React JS, Tableau and Matlab.
-\item Experience with DevOps, CI/CD automation.
-\item Work experience with Terraform, Chef, Jenkins, Rundeck.
-\item Work experience with Kubernetes, Docker, Gitlab pipelines, PostgreSQL, Grafana.
-\item Work experience with public clouds, such as Azure, Google cloud, AWS.
-\item Understanding of Data Science, Machine Learning, Data Visualization
-\item Always interested in learning new technologies and concepts. 
-\end{itemize}
+\cvsection{Education}
+\cvevent{B.Sc.\ in Computer Science}{Eotvos Lorand University}{Sept 2017 --  Jan 2021}{}
+\begin{outline}
+\1 Thesis title: Movie Recommendation System
+\2 Backend: Flask, Python
+\2 Fronend: React JS
+\end{outline} 
+\vspace{3mm}
 
-\divider
+% \cvsection{Job Related Skills}
+
+% %\cvevent{Data Analytics and Dashboard}{Course Project}{}{}
+% \begin{itemize}
+% \item Experience with C++, Java, Python, Javascript, Ruby, PHP, PL/SQL, Go, jQuery, React JS, Tableau and Matlab.
+% \item Experience with DevOps, CI/CD automation.
+% \item Work experience with Terraform, Chef, Jenkins, Rundeck.
+% \item Work experience with Kubernetes, Docker, Gitlab pipelines, PostgreSQL, Grafana.
+% \item Work experience with public clouds, such as Azure, Google cloud, AWS.
+% \item Understanding of Data Science, Machine Learning, Data Visualization
+% \item Always interested in learning new technologies and concepts. 
+% \end{itemize}
 
 
 
 \cvsection{Certifications}
 \begin{itemize}
-\item \textbf{Microsoft Certified: Azure Administrator Associate AZ-104 -} (Microsoft)
-\item \textbf{Microsoft Certified: Azure Fundamentals AZ-900 -} (Microsoft)
-\item \textbf{Certified Kubernetes Administrator (CKA) with Practice Tests -} (Udemy)
-\item \textbf{Kubernetes for the Absolute Beginners -} (Udemy)
-\item \textbf{GitLab CI - A Complete Hands-On for CI/CD Pipelines and DevOps -} (Udemy)
-\item \textbf{DevOps Fundamentals - CI/CD with AWS + Docker + Ansible + Jenkins -} (Udemy)
-\item \textbf{Introduction to Data Science in Python -} (University of Michigan Coursera)
-\item \textbf{Machine Learning for All} (University of London Coursera)
-\item \textbf{Introduction to Big Data -} (University of California San Diego Coursera)
-\item \textbf{Cloud Computing Concepts -} (University of Illinois at Urbana-Champaign Coursera)
-\item \textbf{HTML, CSS, and Javascript for Web Developers -} (Johns Hopkins University Coursera)
-\item \textbf{Responsive Website Basics: Code with HTML, CSS, and JavaScript -} (University of London Coursera)
-\item \textbf{Building Web Applications in PHP -} (University of Michigan Coursera)
-\item \textbf{Introduction to Structured Query Language -} (University of Michigan Coursera)
-\item \textbf{Building Database Applications in PHP -} (University of Michigan Coursera)
-\item \textbf{JavaScript, jQuery, and JSON -} (University of Michigan Coursera)
-\item \textbf{Python Programming: A Concise Introduction -} (Wesleyan University Coursera)
-\item \textbf{MATLAB Onramp -} (MathWorks)
+\item {Microsoft Certified: Azure Administrator Associate AZ-104 -} {\scriptsize(Microsoft)}
+\item {Microsoft Certified: Azure Fundamentals AZ-900 -} {\scriptsize(Microsoft)}
+\item {Certified Kubernetes Administrator (CKA) with Practice Tests -} {\scriptsize(Udemy)}
+\item {Kubernetes for the Absolute Beginners -} {\scriptsize(Udemy)}
+\item {GitLab CI - A Complete Hands-On for CI/CD Pipelines and DevOps -} {\scriptsize(Udemy)}
+\item {DevOps Fundamentals - CI/CD with AWS + Docker + Ansible + Jenkins -} {\scriptsize(Udemy)}
+\item {Introduction to Data Science in Python -} {\scriptsize(University of Michigan Coursera)}
+\item {Machine Learning for All} {\scriptsize(University of London Coursera)}
+\item {Introduction to Big Data -} {\scriptsize(University of California San Diego Coursera)}
+\item {Cloud Computing Concepts -} {\scriptsize(University of Illinois at Urbana-Champaign Coursera)}
+\item {HTML, CSS, and Javascript for Web Developers -} {\scriptsize(Johns Hopkins University Coursera)}
+\item {Responsive Website Basics: Code with HTML, CSS, and JavaScript -} {\scriptsize(University of London Coursera)}
+\item {Building Web Applications in PHP -} {\scriptsize(University of Michigan Coursera)}
+\item {Introduction to Structured Query Language -} {\scriptsize(University of Michigan Coursera)}
+\item {Building Database Applications in PHP -} {\scriptsize(University of Michigan Coursera)}
+\item {JavaScript, jQuery, and JSON -} {\scriptsize(University of Michigan Coursera)}
+\item {Python Programming: A Concise Introduction -} {\scriptsize(Wesleyan University Coursera)}
+\item {MATLAB Onramp -} {\scriptsize(MathWorks)}
 \end{itemize}
 
 
@@ -227,15 +247,15 @@
 ``Don't wait for the right moment to start, start and make each moment right.''
 \end{quote}
 
-\vspace{3mm}
+\vspace{4mm}
 
 \cvsection{Skills}
-
-\cvtag{Terraform}
-\cvtag{Chef}
-\cvtag{Jenkins}
 \cvtag{Docker}
 \cvtag{Kubernetes}
+\cvtag{CI/CD}
+\cvtag{Jenkins}
+\cvtag{Terraform}
+\cvtag{Chef}
 \cvtag{Rundeck}
 \cvtag{Python}
 \cvtag{Java}
@@ -243,20 +263,23 @@
 \cvtag{Azure}
 \cvtag{AWS}
 \cvtag{GCP}
-\cvtag{Github}
-\cvtag{GitLab}
-\cvtag{CI/CD}
+\cvtag{Git}
 \cvtag{Pl/SQL}
 \cvtag{PostgreSQL}
 \cvtag{Grafana}
+\cvtag{Loki}
+\cvtag{Prometheus}
+\cvtag{Minio}
+\cvtag{RabbitMQ}
+\cvtag{Vault}
+\cvtag{Sentry}
 \cvtag{JavaScript}
-\cvtag{Machine Learning}
-\cvtag{Data Visualization}
+\cvtag{ML}
 
 
 
 % \divider\smallskip
-\vspace{3mm}
+\vspace{4mm}
 
 
 \cvsection{Strengths}
@@ -271,37 +294,42 @@
 \cvtag{Passionate}
 
 % \divider\smallskip
-\vspace{3mm}
+\vspace{4mm}
 
 \cvsection{Languages}
-
 \cvskill{English}{4}
 \cvskill{Urdu}{5}
 \cvskill{Sindhi}{5}
+\vspace{4mm}
 
 % \divider\smallskip
-\vspace{5mm}
+% \vspace{5mm}
 
-\cvsection{Education}
-\cvevent{B.Sc.\ in Computer Science}{Eotvos Lorand University}{Sept 2017 --  Jan 2021}{}
-\begin{outline}
-\1 Thesis title: Movie Recommendation System
-\2 Backend: Flask, Python
-\2 Fronend: React JS
-\end{outline}              
-\medskip
-\vspace{30mm}
+% \cvsection{Job Related Skills}
+
+% %\cvevent{Data Analytics and Dashboard}{Course Project}{}{}
+% \begin{itemize}
+% \item Experience with C++, Java, Python, Javascript, Ruby, PHP, PL/SQL, Go, jQuery, React JS, Tableau and Matlab.
+% \item Experience with DevOps, CI/CD automation.
+% \item Work experience with Terraform, Chef, Jenkins, Rundeck.
+% \item Work experience with Kubernetes, Docker, Gitlab pipelines, PostgreSQL, Grafana.
+% \item Work experience with public clouds, such as Azure, Google cloud, AWS.
+% \item Understanding of Data Science, Machine Learning, Data Visualization
+% \item Always interested in learning new technologies and concepts. 
+% \end{itemize}
+% \medskip
+% \vspace{30mm}
 
 
 \cvsection{Projects}
 \begin{itemize}
-\item Movie Recommender System (Python <Flask>, React JS)
-\item Voice Assistant (Python)
-\item School Management System (Java, SQL)
-\item Snake Game (Java)
-\item Command and Conquer Game (Java)
-\item Hunting Game (Java)
-\item Apple IPhone Website (HTML, CSS)
+\item Movie Recommender System \scriptsize(Flask, React JS)
+\item Voice Assistant \scriptsize(Python)
+\item School Management System \scriptsize(Java, SQL)
+\item Snake Game \scriptsize(Java)
+\item Command and Conquer Game \scriptsize(Java)
+\item Hunting Game \scriptsize(Java)
+\item Apple IPhone Website \scriptsize(HTML, CSS)
 \end{itemize}
 %\cvsection{Reference}
 %\divider

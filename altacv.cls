@@ -213,8 +213,8 @@
 \NewInfoField{phone}{\faPhone}
 \NewInfoField{homepage}{\faGlobe}[https://]
 \NewInfoField{twitter}{\faTwitter}[https://twitter.com/]
-\NewInfoField{linkedin}{\faLinkedin}[https://linkedin.com/in/]
-\NewInfoField{github}{\faGithub}[https://github.com/]
+\NewInfoField{linkedin}{\faLinkedin}[https://]
+\NewInfoField{github}{\faGithub}[https://]
 \NewInfoField{orcid}{\aiOrcid}[https://orcid.com/]
 \NewInfoField{location}{\faMapMarker}
 
@@ -286,7 +286,7 @@
   \bigskip%
   \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
   {\color{heading}\cvsectionfont\MakeUppercase{#2}}\\[-1ex]%
-  {\color{headingrule}\rule{\linewidth}{2pt}\par}\medskip
+  {\color{headingrule}\rule{\linewidth}{1.5pt}\par}\medskip
 }
 
 \newcommand{\cvsubsection}[1]{%
@@ -296,7 +296,7 @@
 
 % v1.1.4: fixes inconsistent font size
 \newcommand{\cvevent}[4]{%
-  {\large\color{emphasis}#1\par}
+  \textbf{\color{emphasis}#1}\par
   \smallskip\normalsize
   \ifstrequal{#2}{}{}{
   \textbf{\color{accent}#2}\par
@@ -315,7 +315,7 @@
 }
 
 \newcommand{\cvtag}[1]{%
-  \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
+  \small\tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
 }
 
 \newcommand{\cvskill}[2]{%
